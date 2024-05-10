@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-leh#q6ie0x50qq@h3zknppaemv-q%u@gk&tfi8uoil#kfd1du@
 DEBUG = True
 
 # for vercel
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
 
 
 # Application definition
@@ -125,7 +125,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STATICFILES_DIRS = [
-    BASE_DIR / "../donation_app/static",
+    BASE_DIR / "/static",
 ]
 
 EMAIL_HOST='smtp.gmail.com'
