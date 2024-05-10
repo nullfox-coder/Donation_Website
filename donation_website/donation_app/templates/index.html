@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="/static/images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="{% url 'index' %}">HOME</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT</a></li>
+                    <li><a href="https://rzp.io/l/rMlYtqo13y">DONATE</a></li>
+                    <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>       
+
+<div class="text-box">
+    <h1>Be a symbol of HOPE</h1>
+    <p>Giving is not just about make a donation, it's about making a difference<br>No one has ever become poor by giving
+    </p>
+    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_O8Ml9bXQhR6V2Q" async> </script> </form>
+</div>
+
+</section>
+
+
+
+<!-----------------------campus----------------------->
+
+<section class="campus">
+    <h1>Our NGO Centres</h1>
+    <p>Have a look at our centres, see how much fun we have while helping people all over the world</p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="/static/images/roorkee.png">
+            <div class="layer">
+                <h3>ROORKEE</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="/static/images/delhi.png">
+            <div class="layer">
+                <h3>DELHI</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="/static/images/bombay.png">
+            <div class="layer">
+                <h3>BOMBAY</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--------------------Testimonials----------------------->
+
+<section class="testimonials">
+    <h1>What Our Leaders Taught Us</h1>
+    <p></p>
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="static/images/user1.jpg">
+            <div>
+                <p>You have not lived today until you have done something for someone who can never repay you.
+                </p>
+                <h3>-John Bunyan</h3>
+                
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <img src="/static/images/user2.jpg">
+            <div>
+                <p>The simplest acts of kindness are by far more powerful then a thousand heads bowing in prayer.
+                </p>
+                <h3>-Mahatma Gandhi</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------Call to Action--------->
+
+<section class="cta">
+    <h1>PARTICIPATION IS EVERYTHING</h1>
+    <a href="contact.html" class="visit-btn">CONTACT US</a>
+</section>
+
+<!--------Footer--------->
+
+{% include "footer.html" %}
+
+<!------Java Script------>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

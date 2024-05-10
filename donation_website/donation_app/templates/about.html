@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="/static/images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="{% url 'index' %}">HOME</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT</a></li>
+                    <li><a href="https://rzp.io/l/kifP1Z8mlr">DONATE</a></li>
+                    <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+</section>
+
+<!------- about us content------>
+
+<section class="about-us">
+
+    <div class="row">
+        <div class="about-col">
+            <h1>We are a non-profit<br>organisation</h1>
+            <p> Sparks Donation is a non-governmental organisation to help children acquire basic needs. We are proudly non-profit, non-corporate, non-compromised. Thousands of people like you help us stand up for better future of younger generations.
+                We rely on donations to carry out our mission to fulfil the dreams of our future generations.
+                <br><br>
+                We believe in collaboration as we know this work is bigger than any one organization. We are part of a global network of nonprofit organizations leading the worldwide movement.
+                Will you give today?
+        </div>
+        <div class="about-col">
+            <img src="/static/images/about.jpg">
+        </div>
+            
+    </div>
+</section>
+
+
+<!--------Footer--------->
+
+{% include "footer.html" %}
+
+<!------Java Script------>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
